@@ -15,7 +15,7 @@ public class MainPuntos  {
 
         do {
             Scanner s = new Scanner(System.in);
-            System.out.println("Menu \n 1. Add \n 2. List \n 3. Update \n 4. Delete \n 5. Salir");
+            System.out.println("Menu \n 1. Add \n 2. List \n 3. Update \n 4. Delete \n 5. Exit");
 
             opc = s.next();
             switch (opc) {
