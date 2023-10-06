@@ -28,12 +28,12 @@ public class MainPuntos  {
                     double pri = s.nextDouble();
                     System.out.println("Accumulated points");
                     double poi = s.nextDouble();
-                    repo.save(new PuntosDTO(id,nam,pri,poi)); //Agregar
+                    repo.save(new PuntosDTO(id,nam,pri,poi));
                     break;
                 }
 
                 case "2": {
-                    List<PuntosDTO> local = repo.findAll(); //Obtener todos
+                    List<PuntosDTO> local = repo.findAll();
                     if (!local.isEmpty()) {
                         local.forEach(System.out::println);
                     } else {
@@ -53,14 +53,14 @@ public class MainPuntos  {
                     System.out.print("New Accumulated points ");
                     double poi = s.nextDouble();
                     PuntosDTO beaActualizar = new PuntosDTO(id, nam, pri, poi);
-                    repo.update(beaActualizar); //Actualizar
+                    repo.update(beaActualizar);
                     break;
                 }
                 case "4": {
                     System.out.println("===== Delete ======");
                     System.out.print("Id Points ");
                     Integer id = s.nextInt();
-                    repo.delete(repo.findById(id)); //Obtener y eliminar
+                    repo.delete(repo.findById(id));
                     repo.findAll().forEach(System.out::println);
                     break;
 
